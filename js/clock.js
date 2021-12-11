@@ -1,0 +1,14 @@
+const clock = document.querySelector('h2#clock');
+
+function getClock() {
+  const date = new Date();
+  //padStart는 (문자열갯수, "채울문자")로 이루어졋으며
+  //문자열에만 쓸수있으므로 String을 이용해서 문자열로 변환
+  const hours = String(date.getHours()).padStart(2,'0');
+  const minutes = String(date.getMinutes()).padStart(2,'0');
+  const seconds = String(date.getSeconds()).padStart(2,'0');
+  clock.innerText = `${hours}:${minutes}:${seconds}`;
+}
+
+getClock();
+setInterval(getClock, 1000);
