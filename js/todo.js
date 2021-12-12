@@ -2,11 +2,13 @@ const toDoForm = document.getElementById('todo-form');
 const toDoInput = document.querySelector('#todo-form input');
 const toDoList = document.getElementById('todo-list');
 
-const toDos = [];
+const TODOS_KEY = "todos";
+
+let toDos = [];
 
 // ToDo를 Localstorage에 저장하는 함수
 function saveToDos() {
-  localStorage.setItem("todos", JSON.stringify(toDos)); //JSON.stringify 는 모든요소들을 문자열로 변환
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); //JSON.stringify 는 모든요소들을 문자열로 변환
 }
 
 // ToDo를 삭제하는 함수
@@ -40,3 +42,12 @@ function handleToDoSubmit(event) {
 
 //ToDo 입력폼에 입력('submit')해서 함수호출
 toDoForm.addEventListener('submit', handleToDoSubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
+}
+
