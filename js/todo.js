@@ -11,7 +11,7 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); //JSON.stringify 는 모든요소들을 문자열로 변환
 }
 
-// ToDo를 삭제하는 함수
+// 4. ToDo를 삭제하는 함수
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -19,7 +19,7 @@ function deleteToDo(event) {
   saveToDos();
 }
 
-// ToDo를 HTML요소에 보여주는 함수
+// 3. ToDo를 HTML요소에 보여주는 함수
 function paintToDo(newTodo) {
   const li = document.createElement('li');
   li.id = newTodo.id;
@@ -33,7 +33,7 @@ function paintToDo(newTodo) {
   toDoList.appendChild(li);
 }
 
-// ToDo를 입력하는 함수
+// 2. ToDo를 입력하는 함수
 function handleToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
@@ -47,7 +47,7 @@ function handleToDoSubmit(event) {
   saveToDos();
 }
 
-//ToDo 입력폼에 입력('submit')해서 함수호출
+// 1. ToDo 입력폼에 입력('submit')해서 함수호출
 toDoForm.addEventListener('submit', handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
