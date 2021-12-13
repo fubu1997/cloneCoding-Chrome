@@ -1,3 +1,135 @@
+.root {
+  --color-white : white;
+  --font-size : 20px;
+  --font-weight : 10px;
+}
+
 .hidden {
   display: none;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  color: white;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+/* background */
+.bgImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* title */
+.title {
+  width: 100%;
+  height: 20%;
+  margin: 15px 0;
+  color: beige;
+  font-size: 60px;
+  text-align: center;
+}
+
+/* Login form */
+#login-form {
+  width: 50%;
+  height: 10%;
+  margin: auto;
+  text-align: center;
+}
+#login-form input {
+  font-size: 30px;
+}
+
+/* clock */
+#clocks {
+  color: white;
+  width: 30%;
+  height: 10%;
+  margin: 10px 35%;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* weather */
+.weather-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 10%;
+  margin: 5px 25%;
+  text-align: center;
+}
+#weather{
+  width: 50%;
+  height: 10%;
+  margin: 0 10px;
+  text-align: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+#weather span {
+  font-size: 25px;
+}
+
+/* Todo Form */
+#todo-form-container{
+  width: 50%;
+  height: 40%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+#todo-form{
+  width: 50%;
+  height: 100%;
+  margin: 5px auto;
+  text-align: center;
+}
+#todo-form input{
+  font-size: 30px;
+  text-align: center;
+}
+#todo-list {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  padding-left: 0;
+  border: 2px solid gray;
+  background-color: gray;
+  list-style: none;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+#todo-list li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  border: 1px solid beige;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 5px 10%;
+}
+
+/* Quote */
+#quote{
+  text-align: center;
 }

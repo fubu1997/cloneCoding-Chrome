@@ -8,8 +8,12 @@
   <title>Momentum App</title>
 </head>
 <body>
+  <!-- Title -->
+  <h1 class="title">Make To Do list.</h1>
+
   <!-- Login Form -->
   <form id="login-form" class="hidden">
+    <h2>Write Your name</h2>
     <input 
       required 
       maxlength="15" 
@@ -20,26 +24,36 @@
   </form>
 
   <!-- Clock -->
-  <h2 id="clock"></h2>
-  <h1 id="greeting" class="hidden"></h1>
+  <div id="clocks">
+    <h1>현재 시간</h1>
+    <h2 id="clock"></h2>
+    <h1 id="greeting" class="hidden"></h1>
+  </div>
 
   <!-- Todo Form -->
-  <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter." required>
-  </form>
-  <ul id="todo-list"></ul>
-  
-  <!-- Quote -->
-  <div id="quote">
-    <span></span>
-    <span></span>
+  <div id="todo-form-container">
+    <form id="todo-form">
+      <input type="text" placeholder="할 일 추가하기 (엔터)" required>
+    </form>
+    <ul id="todo-list">
+      <h2>목 록</h2>
+    </ul>
   </div>
 
   <!-- Weather -->
-<div id="weather">
-  <span></span>
-  <span></span>
-</div>
+  <div class="weather-container">
+    <h2>현재 날씨</h2>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+    <!-- Quote -->
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
 
   <!-- JS -->
   <script src="js/greetings.js"></script>
